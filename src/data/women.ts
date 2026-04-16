@@ -1,0 +1,126 @@
+export interface Woman {
+  name: string;
+  profession: string;
+  description: string;
+  category: string;
+  era: string;
+  gameClass?: string;
+  gameSkill?: string;
+  power?: number;
+}
+
+// Fallback minimum data to ensure app never breaks
+export const FALLBACK_WOMEN: Woman[] = [
+  { name: 'Marie Curie', profession: 'Cientista', description: 'Pioneira na radioatividade, primeira mulher a ganhar o Nobel de Física e Química.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Radiação Devastadora', power: 95 },
+  { name: 'Ada Lovelace', profession: 'Matemática', description: 'Primeira programadora da história.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Algoritmo Primordial', power: 93 },
+  { name: 'Rosalind Franklin', profession: 'Cientista', description: 'Descobriu a estrutura do DNA.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Foto 51', power: 92 },
+  { name: 'Hypatia', profession: 'Filósofa', description: 'Matemática e astrônoma alexandrina.', category: 'Ciência', era: 'Antiga', gameClass: 'Caster', gameSkill: 'Estrelas de Alexandria', power: 89 },
+  { name: 'Florence Nightingale', profession: 'Enfermeira', description: 'Fundadora da enfermagem moderna, revolucionou os cuidados médicos.', category: 'Ciência', era: 'Moderna', gameClass: 'Shielder', gameSkill: 'Lâmpada da Salvação', power: 88 },
+];
+
+export const women: Woman[] = [
+  { name: 'Marie Curie', profession: 'Cientista', description: 'Pioneira na radioatividade, primeira mulher a ganhar o Nobel de Física e Química.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Radiação Devastadora', power: 95 },
+  { name: 'Rosa Parks', profession: 'Ativista', description: 'Lutou contra a segregação racial nos ônibus dos EUA.', category: 'Ativismo', era: 'Contemporânea', gameClass: 'Shielder', gameSkill: 'Resistência Inquebrantável', power: 88 },
+  { name: 'Malala Yousafzai', profession: 'Ativista', description: 'Defensora da educação feminina, sobrevivente de atentado talibã.', category: 'Ativismo', era: 'Contemporânea', gameClass: 'Shielder', gameSkill: 'Voz da Coragem', power: 90 },
+  { name: 'Amelia Earhart', profession: 'Aviadora', description: 'Primeira mulher a voar sozinha pelo Atlântico.', category: 'Exploração', era: 'Moderna', gameClass: 'Rider', gameSkill: 'Voo Transcendental', power: 85 },
+  { name: 'Frida Kahlo', profession: 'Artista', description: 'Pintora mexicana conhecida por autorretratos expressionistas.', category: 'Arte', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Pincelada da Alma', power: 87 },
+  { name: 'Cleopatra', profession: 'Rainha', description: 'Última rainha do Egito Antigo, aliada de Roma.', category: 'Liderança', era: 'Antiga', gameClass: 'Ruler', gameSkill: 'Domínio do Nilo', power: 92 },
+  { name: 'Joan of Arc', profession: 'Guerreira', description: 'Líder militar francesa na Guerra dos Cem Anos.', category: 'Guerra', era: 'Medieval', gameClass: 'Saber', gameSkill: 'Chama Sagrada', power: 96 },
+  { name: 'Mother Teresa', profession: 'Missionária', description: 'Fundadora da Missão da Caridade, Nobel da Paz.', category: 'Humanitário', era: 'Contemporânea', gameClass: 'Shielder', gameSkill: 'Cura Divina', power: 80 },
+  { name: 'Jane Austen', profession: 'Escritora', description: 'Autora de romances como Orgulho e Preconceito.', category: 'Literatura', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Palavras Afiadas', power: 82 },
+  { name: 'Harriet Tubman', profession: 'Abolicionista', description: 'Liderou o Underground Railroad para libertar escravos.', category: 'Ativismo', era: 'Moderna', gameClass: 'Assassin', gameSkill: 'Caminho Invisível', power: 91 },
+  { name: 'Ada Lovelace', profession: 'Matemática', description: 'Primeira programadora da história.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Algoritmo Primordial', power: 93 },
+  { name: 'Hypatia', profession: 'Filósofa', description: 'Matemática e astrônoma alexandrina.', category: 'Ciência', era: 'Antiga', gameClass: 'Caster', gameSkill: 'Estrelas de Alexandria', power: 89 },
+  { name: 'Elizabeth I', profession: 'Rainha', description: 'Rainha da Inglaterra durante a Era Elisabetana.', category: 'Liderança', era: 'Renascimento', gameClass: 'Ruler', gameSkill: 'Decreto Real', power: 94 },
+  { name: 'Catherine the Great', profession: 'Imperatriz', description: 'Imperatriz da Rússia, expandiu o império.', category: 'Liderança', era: 'Moderna', gameClass: 'Ruler', gameSkill: 'Expansão Imperial', power: 93 },
+  { name: 'Simone de Beauvoir', profession: 'Filósofa', description: 'Autora de O Segundo Sexo, feminista.', category: 'Filosofia', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Desconstrução', power: 86 },
+  { name: 'Virginia Woolf', profession: 'Escritora', description: 'Pioneira do modernismo literário.', category: 'Literatura', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Fluxo de Consciência', power: 84 },
+  { name: 'Marie Antoinette', profession: 'Rainha', description: 'Rainha da França antes da Revolução.', category: 'Liderança', era: 'Moderna', gameClass: 'Ruler', gameSkill: 'Corte de Versalhes', power: 75 },
+  { name: 'Eleanor Roosevelt', profession: 'Diplomata', description: 'Defensora dos direitos humanos na ONU.', category: 'Diplomacia', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Declaração Universal', power: 88 },
+  { name: 'Indira Gandhi', profession: 'Primeira-ministra', description: 'Primeira mulher primeira-ministra da Índia.', category: 'Liderança', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Tigre de Ferro', power: 90 },
+  { name: 'Golda Meir', profession: 'Primeira-ministra', description: 'Primeira mulher primeira-ministra de Israel.', category: 'Liderança', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Muro de Ferro', power: 87 },
+  { name: 'Angela Merkel', profession: 'Chanceler', description: 'Chanceler da Alemanha, líder europeia.', category: 'Liderança', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Diplomacia de Aço', power: 89 },
+  { name: 'Margaret Thatcher', profession: 'Primeira-ministra', description: 'Primeira mulher primeira-ministra do Reino Unido.', category: 'Liderança', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Dama de Ferro', power: 91 },
+  { name: 'Queen Victoria', profession: 'Rainha', description: 'Rainha do Reino Unido durante a era vitoriana.', category: 'Liderança', era: 'Moderna', gameClass: 'Ruler', gameSkill: 'Império Solar', power: 93 },
+  { name: 'Nefertiti', profession: 'Rainha', description: 'Rainha do Egito Antigo, esposa de Akhenaton.', category: 'Liderança', era: 'Antiga', gameClass: 'Ruler', gameSkill: 'Beleza Divina', power: 88 },
+  { name: 'Sappho', profession: 'Poeta', description: 'Poeta lírica da Grécia Antiga.', category: 'Literatura', era: 'Antiga', gameClass: 'Caster', gameSkill: 'Versos de Lesbos', power: 83 },
+  { name: 'Christine de Pizan', profession: 'Escritora', description: 'Primeira escritora profissional da Europa.', category: 'Literatura', era: 'Medieval', gameClass: 'Caster', gameSkill: 'Cidade das Damas', power: 81 },
+  { name: 'Hildegard of Bingen', profession: 'Mística', description: 'Compositora, filósofa e visionária medieval.', category: 'Espiritualidade', era: 'Medieval', gameClass: 'Caster', gameSkill: 'Visão Celestial', power: 86 },
+  { name: 'Artemisia Gentileschi', profession: 'Pintora', description: 'Pintora barroca italiana, sobrevivente de violência.', category: 'Arte', era: 'Renascimento', gameClass: 'Avenger', gameSkill: 'Justiça de Judite', power: 88 },
+  { name: 'Sor Juana Inés de la Cruz', profession: 'Poeta', description: 'Poeta e filósofa mexicana do século XVII.', category: 'Literatura', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Sonho Barroco', power: 84 },
+  { name: 'Émilie du Châtelet', profession: 'Matemática', description: 'Matemática e física francesa, tradutora de Newton.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Força Viva', power: 87 },
+  { name: 'Rosalind Franklin', profession: 'Cientista', description: 'Descobriu a estrutura do DNA.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Foto 51', power: 92 },
+  { name: 'Lise Meitner', profession: 'Física', description: 'Descobriu a fissão nuclear.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Fissão Nuclear', power: 94 },
+  { name: 'Jocelyn Bell Burnell', profession: 'Astrônoma', description: 'Descobriu os pulsares.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Archer', gameSkill: 'Pulsar Cósmico', power: 86 },
+  { name: 'Sally Ride', profession: 'Astronauta', description: 'Primeira mulher americana no espaço.', category: 'Exploração', era: 'Contemporânea', gameClass: 'Rider', gameSkill: 'Órbita Estelar', power: 85 },
+  { name: 'Valentina Tereshkova', profession: 'Cosmonauta', description: 'Primeira mulher no espaço.', category: 'Exploração', era: 'Contemporânea', gameClass: 'Rider', gameSkill: 'Vostok 6', power: 88 },
+  { name: 'Mae Jemison', profession: 'Astronauta', description: 'Primeira mulher negra no espaço.', category: 'Exploração', era: 'Contemporânea', gameClass: 'Rider', gameSkill: 'Fronteira Final', power: 87 },
+  { name: 'Wangari Maathai', profession: 'Ambientalista', description: 'Fundadora do Movimento Cinturão Verde, Nobel da Paz.', category: 'Ativismo', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Raízes da Terra', power: 85 },
+  { name: 'Rigoberta Menchú', profession: 'Ativista', description: 'Defensora dos direitos indígenas, Nobel da Paz.', category: 'Ativismo', era: 'Contemporânea', gameClass: 'Shielder', gameSkill: 'Voz Ancestral', power: 86 },
+  { name: 'Aung San Suu Kyi', profession: 'Líder política', description: 'Líder da oposição em Mianmar, Nobel da Paz.', category: 'Liderança', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Resistência Pacífica', power: 84 },
+  { name: 'Benazir Bhutto', profession: 'Primeira-ministra', description: 'Primeira mulher primeira-ministra do Paquistão.', category: 'Liderança', era: 'Contemporânea', gameClass: 'Ruler', gameSkill: 'Coragem do Oriente', power: 87 },
+  { name: 'Clarice Lispector', profession: 'Escritora', description: 'Escritora brasileira conhecida por obras introspectivas como A Hora da Estrela.', category: 'Literatura', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Epifania', power: 90 },
+  { name: 'Adelaide L. T. de Mendonça', profession: 'Escritora e Jornalista', description: 'Pioneira no jornalismo feminino no Brasil, escritora e poeta.', category: 'Literatura', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Pena Revolucionária', power: 80 },
+  { name: 'Helena Antipoff', profession: 'Psicanalista', description: 'Trouxe a psicanálise para o Brasil, fundadora da Sociedade Brasileira de Psicanálise.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Mente Aberta', power: 83 },
+  // Additional women to reach 102
+  { name: 'Florence Nightingale', profession: 'Enfermeira', description: 'Fundadora da enfermagem moderna, revolucionou os cuidados médicos.', category: 'Ciência', era: 'Moderna', gameClass: 'Shielder', gameSkill: 'Lâmpada da Salvação', power: 88 },
+  { name: 'Marie Gouze (Olympe de Gouges)', profession: 'Ativista', description: 'Escreveu a Declaração dos Direitos da Mulher e da Cidadã.', category: 'Ativismo', era: 'Moderna', gameClass: 'Saber', gameSkill: 'Declaração Flamejante', power: 85 },
+  { name: 'Hedy Lamarr', profession: 'Inventora e Atriz', description: 'Inventou a base do Wi-Fi e Bluetooth, além de estrela de Hollywood.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Frequência Secreta', power: 91 },
+  { name: 'Grace Hopper', profession: 'Cientista da Computação', description: 'Criou o primeiro compilador e popularizou o termo "bug".', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Compilação Fatal', power: 92 },
+  { name: 'Dorothy Hodgkin', profession: 'Química', description: 'Nobel de Química, determinou a estrutura da penicilina e insulina.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Cristalografia', power: 89 },
+  { name: 'Rachel Carson', profession: 'Bióloga', description: 'Autora de Primavera Silenciosa, mãe do ambientalismo moderno.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Primavera Silenciosa', power: 86 },
+  { name: 'Barbara McClintock', profession: 'Geneticista', description: 'Descobriu os transposons, Nobel de Medicina.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Genes Saltadores', power: 90 },
+  { name: 'Chien-Shiung Wu', profession: 'Física', description: 'Derrubou a lei da paridade na física de partículas.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Quebra de Paridade', power: 93 },
+  { name: 'Maria Montessori', profession: 'Educadora', description: 'Criou o método Montessori de educação infantil.', category: 'Educação', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Mente Livre', power: 85 },
+  { name: 'Emmy Noether', profession: 'Matemática', description: 'Criou o Teorema de Noether, fundamental para a física moderna.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Simetria Absoluta', power: 95 },
+  { name: 'Vera Rubin', profession: 'Astrônoma', description: 'Descobriu evidências da matéria escura.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Archer', gameSkill: 'Matéria Escura', power: 91 },
+  { name: 'Tu Youyou', profession: 'Farmacologista', description: 'Nobel de Medicina, descobriu o tratamento para malária.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Artemisina', power: 89 },
+  { name: 'Jane Goodall', profession: 'Primatologista', description: 'Maior especialista em chimpanzés do mundo.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Sussurro Selvagem', power: 84 },
+  { name: 'Dian Fossey', profession: 'Zoóloga', description: 'Defensora dos gorilas-da-montanha em Ruanda.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Berserker', gameSkill: 'Fúria da Floresta', power: 86 },
+  { name: 'Sylvia Earle', profession: 'Oceanógrafa', description: 'Explorou as profundezas dos oceanos, "Sua Profundeza".', category: 'Ciência', era: 'Contemporânea', gameClass: 'Rider', gameSkill: 'Abismo Marinho', power: 85 },
+  { name: 'Katherine Johnson', profession: 'Matemática', description: 'Calculou trajetórias para as missões Apollo da NASA.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Cálculo Orbital', power: 94 },
+  { name: 'Mary Anning', profession: 'Paleontóloga', description: 'Descobriu fósseis fundamentais de dinossauros marinhos.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Fóssil Revelado', power: 82 },
+  { name: 'Maryam Mirzakhani', profession: 'Matemática', description: 'Primeira mulher a ganhar a Medalha Fields.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Superfície Hiperbólica', power: 96 },
+  { name: 'Rita Levi-Montalcini', profession: 'Neurologista', description: 'Nobel de Medicina, descobriu fatores de crescimento nervoso.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Sinapses', power: 90 },
+  { name: 'Gerty Cori', profession: 'Bioquímica', description: 'Primeira mulher a ganhar o Nobel de Medicina.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Ciclo Metabólico', power: 88 },
+  { name: 'Irène Joliot-Curie', profession: 'Química', description: 'Nobel de Química, filha de Marie Curie, pesquisou radioatividade artificial.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Legado Radioativo', power: 87 },
+  { name: 'Maria Goeppert Mayer', profession: 'Física', description: 'Nobel de Física, modelo de camadas nucleares.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Camadas Nucleares', power: 91 },
+  { name: 'Donna Strickland', profession: 'Física', description: 'Nobel de Física 2018, amplificação de pulsos laser.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Archer', gameSkill: 'Pulso Laser', power: 89 },
+  { name: 'Andrea Ghez', profession: 'Astrônoma', description: 'Nobel de Física 2020, descoberta do buraco negro supermassivo.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Archer', gameSkill: 'Horizonte de Eventos', power: 92 },
+  { name: 'Françoise Barré-Sinoussi', profession: 'Virologista', description: 'Nobel de Medicina, co-descobriu o HIV.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Detecção Viral', power: 90 },
+  { name: 'May-Britt Moser', profession: 'Neurocientista', description: 'Nobel de Medicina 2014, descobriu o sistema de posicionamento do cérebro.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'GPS Neural', power: 88 },
+  { name: 'Elizabeth Blackburn', profession: 'Bióloga Molecular', description: 'Nobel de Medicina, descobriu a telomerase.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Imortalidade Celular', power: 91 },
+  { name: 'Carol Greider', profession: 'Bióloga Molecular', description: 'Nobel de Medicina, co-descobriu telomerase com Blackburn.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Telômeros Infinitos', power: 87 },
+  { name: 'Ada Yonath', profession: 'Cristalógrafa', description: 'Nobel de Química 2009, estrutura do ribossomo.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Cristal Ribossômico', power: 89 },
+  { name: 'Jennifer Doudna', profession: 'Bioquímica', description: 'Nobel de Química, co-inventora do CRISPR.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Tesoura Genética', power: 96 },
+  { name: 'Emmanuelle Charpentier', profession: 'Microbiologista', description: 'Nobel de Química, co-inventora do CRISPR.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Edição Genômica', power: 95 },
+  { name: 'Katalin Karikó', profession: 'Bioquímica', description: 'Nobel de Medicina 2023, pioneira da tecnologia mRNA.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Código mRNA', power: 94 },
+  { name: 'Maria Telkes', profession: 'Biofísica', description: 'Pioneira da energia solar, inventou o primeiro sistema de aquecimento solar.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Raio Solar', power: 84 },
+  { name: 'Cecilia Payne-Gaposchkin', profession: 'Astrônoma', description: 'Descobriu que estrelas são compostas principalmente de hidrogênio e hélio.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Composição Estelar', power: 90 },
+  { name: 'Sophie Germain', profession: 'Matemática', description: 'Contribuiu para a teoria dos números e elasticidade.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Números Primos', power: 86 },
+  { name: 'Mary Somerville', profession: 'Cientista', description: 'Polímata que deu nome à faculdade Somerville em Oxford.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Conhecimento Universal', power: 85 },
+  { name: 'Caroline Herschel', profession: 'Astrônoma', description: 'Primeira mulher a descobrir um cometa.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Caça-Cometas', power: 83 },
+  { name: 'Williamina Fleming', profession: 'Astrônoma', description: 'Classificou mais de 10.000 estrelas, descobriu a Nebulosa Cabeça de Cavalo.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Mapa Estelar', power: 84 },
+  { name: 'Annie Jump Cannon', profession: 'Astrônoma', description: 'Criou o sistema de classificação estelar usado até hoje.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Classificação Celestial', power: 87 },
+  { name: 'Henrietta Swan Leavitt', profession: 'Astrônoma', description: 'Descobriu a relação período-luminosidade das Cefeidas.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Régua Cósmica', power: 89 },
+  { name: 'Nettie Stevens', profession: 'Geneticista', description: 'Descobriu os cromossomos sexuais X e Y.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Determinação Cromossômica', power: 88 },
+  { name: 'Alice Ball', profession: 'Química', description: 'Desenvolveu o tratamento mais eficaz para hanseníase.', category: 'Ciência', era: 'Moderna', gameClass: 'Caster', gameSkill: 'Método Ball', power: 85 },
+  { name: 'Dorothy Vaughan', profession: 'Matemática', description: 'Primeira supervisora negra na NASA, pioneira em programação.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'FORTRAN Ancestral', power: 88 },
+  { name: 'Mary Jackson', profession: 'Engenheira', description: 'Primeira engenheira negra da NASA.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Túnel de Vento', power: 87 },
+  { name: 'Chanda Prescod-Weinstein', profession: 'Física Teórica', description: 'Pesquisadora em cosmologia e matéria escura.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Cosmos Disordenado', power: 86 },
+  { name: 'Gladys West', profession: 'Matemática', description: 'Seu trabalho matemático foi fundamental para o GPS.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Navegação Global', power: 90 },
+  { name: 'Maria Mitchell', profession: 'Astrônoma', description: 'Primeira astrônoma profissional americana.', category: 'Ciência', era: 'Moderna', gameClass: 'Archer', gameSkill: 'Cometa Mitchell', power: 82 },
+  { name: 'Sau Lan Wu', profession: 'Física de Partículas', description: 'Contribuiu para a descoberta do bóson de Higgs.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Partícula de Deus', power: 93 },
+  { name: 'Mária Telkes', profession: 'Inventora', description: 'Rainha do Sol, pioneira em energia solar térmica.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Fusão Solar', power: 84 },
+  { name: 'Bertha Lutz', profession: 'Cientista e Ativista', description: 'Zoóloga brasileira, líder do movimento sufragista no Brasil.', category: 'Ciência', era: 'Moderna', gameClass: 'Shielder', gameSkill: 'Sufrágio Brasileiro', power: 86 },
+  { name: 'Nise da Silveira', profession: 'Psiquiatra', description: 'Revolucionou o tratamento psiquiátrico no Brasil com arte-terapia.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Arte da Cura', power: 88 },
+  { name: 'Johanna Döbereiner', profession: 'Agrônoma', description: 'Revolucionou a agricultura brasileira com fixação biológica de nitrogênio.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Simbiose Verde', power: 85 },
+  { name: 'Graziela Maciel Barroso', profession: 'Botânica', description: 'Maior taxonomista de plantas do Brasil.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Flora Infinita', power: 83 },
+  { name: 'Mayana Zatz', profession: 'Geneticista', description: 'Referência mundial em genética humana e doenças neuromusculares.', category: 'Ciência', era: 'Contemporânea', gameClass: 'Caster', gameSkill: 'Código Genético', power: 90 },
+];
+
+// Ensure we always have data to work with
+const activeWomen = women && women.length > 0 ? women : FALLBACK_WOMEN;
+
+export const categories = [...new Set(activeWomen.map(w => w.category))];
+export const gameClasses = [...new Set(activeWomen.map(w => w.gameClass).filter(Boolean))];
