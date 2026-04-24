@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LogOut, Volume2, VolumeX } from "lucide-react";
 import { toast } from "sonner";
+import { translate } from "@/i18n";
 
 const QuickExitButton = () => {
   const [showConfirm, setShowConfirm] = useState(false);
   const [muted, setMuted] = useState(false);
 
   const handleExit = () => {
-    // Limpa cache de session para privacidade
     sessionStorage.clear();
-    // Redireciona para Google
     window.location.href = "https://www.google.com";
   };
 
@@ -18,20 +17,19 @@ const QuickExitButton = () => {
     if (!showConfirm) {
       setShowConfirm(true);
       if (!muted) {
-        toast("Pressione ESC ou clique novamente para sair", {
+        toast(translate("quickExit.toast"), {
           duration: 3000,
         });
       }
-      // Auto-close em 5 segundos se não clicar
       const timer = setTimeout(() => setShowConfirm(false), 5000);
       return () => clearTimeout(timer);
-    } else {
-      handleExit();
     }
+
+    handleExit();
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape" && showConfirm) {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape" && showConfirm) {
       setShowConfirm(false);
     }
   };
@@ -74,10 +72,8 @@ const QuickExitButton = () => {
                 <div className="flex items-start gap-2">
                   <LogOut className="w-5 h-5 text-rose-deep flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-sm">Sair agora?</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Você será redirecionada para fora desta página. Histórico será limpo.
-                    </p>
+                    <p className="font-semibold text-sm">{translate("quickExit.title")}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{translate("quickExit.description")}</p>
                   </div>
                 </div>
 
@@ -86,13 +82,13 @@ const QuickExitButton = () => {
                     onClick={() => setShowConfirm(false)}
                     className="flex-1 px-3 py-2 text-xs rounded-lg border border-border hover:bg-muted transition-colors font-medium"
                   >
-                    Não, voltar
+                    {translate("quickExit.stay")}
                   </button>
                   <button
                     onClick={handleExit}
                     className="flex-1 px-3 py-2 text-xs rounded-lg bg-rose-deep text-white hover:opacity-90 transition-opacity font-medium"
                   >
-                    Sim, sair
+                    {translate("quickExit.exit")}
                   </button>
                 </div>
               </div>
@@ -103,7 +99,7 @@ const QuickExitButton = () => {
         <button
           onClick={handleClick}
           className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-muted transition-all transform active:scale-95 shadow-lg group relative"
-          title="Saída rápida (ESC para cancelar)"
+          title={translate("quickExit.buttonTitle")}
         >
           <motion.div
             animate={showConfirm ? { scale: 1.1 } : { scale: 1 }}
@@ -116,13 +112,9 @@ const QuickExitButton = () => {
         <button
           onClick={() => setMuted(!muted)}
           className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-muted transition-all text-sm"
-          title={muted ? "Habilitar som" : "Desabilitar som"}
+          title={muted ? translate("quickExit.enableSound") : translate("quickExit.disableSound")}
         >
-          {muted ? (
-            <VolumeX className="w-4 h-4" />
-          ) : (
-            <Volume2 className="w-4 h-4" />
-          )}
+          {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
         </button>
       </motion.div>
     </>

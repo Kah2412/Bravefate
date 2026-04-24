@@ -84,27 +84,27 @@ export const computeDamage = (
   return damage;
 };
 
-export const applyDamage = (defender: FighterState, damage: number) => {
+export const applyDamage = (defender: FighterState, damage: number): FighterState => {
   const nextHealth = Math.max(0, defender.health - damage);
   return { ...defender, health: nextHealth, action: 'hit' };
 };
 
-export const chargeEnergy = (fighter: FighterState, amount: number) => ({
+export const chargeEnergy = (fighter: FighterState, amount: number): FighterState => ({
   ...fighter,
   energy: Math.min(fighter.maxEnergy, fighter.energy + amount)
 });
 
-export const chargeSpecial = (fighter: FighterState, amount: number) => ({
+export const chargeSpecial = (fighter: FighterState, amount: number): FighterState => ({
   ...fighter,
   specialMeter: Math.min(100, fighter.specialMeter + amount)
 });
 
-export const recoverStamina = (fighter: FighterState, amount: number) => ({
+export const recoverStamina = (fighter: FighterState, amount: number): FighterState => ({
   ...fighter,
   stamina: Math.min(100, fighter.stamina + amount)
 });
 
-export const applyBlock = (fighter: FighterState) => ({
+export const applyBlock = (fighter: FighterState): FighterState => ({
   ...fighter,
   action: 'block',
   energy: Math.min(fighter.maxEnergy, fighter.energy + 10),
@@ -112,7 +112,7 @@ export const applyBlock = (fighter: FighterState) => ({
   stamina: Math.min(100, fighter.stamina + 8)
 });
 
-export const useSpecialMove = (fighter: FighterState) => ({
+export const useSpecialMove = (fighter: FighterState): FighterState => ({
   ...fighter,
   energy: Math.max(0, fighter.energy - ATTACKS.special.energyCost),
   specialMeter: 0,
@@ -121,7 +121,7 @@ export const useSpecialMove = (fighter: FighterState) => ({
   stamina: Math.max(0, fighter.stamina - ATTACKS.special.staminaCost)
 });
 
-export const reduceCooldown = (fighter: FighterState) => ({
+export const reduceCooldown = (fighter: FighterState): FighterState => ({
   ...fighter,
   cooldown: Math.max(0, fighter.cooldown - 1)
 });

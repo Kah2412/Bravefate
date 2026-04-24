@@ -41,7 +41,7 @@ const COMBAT_MESSAGES: Record<AttackType, string[]> = {
 export const buildFighter = (character: Character, position: number): FighterState => {
   const baseFighter = createFighter(character, position);
   const boosted = aplicarBuffsAoStatus(character, baseFighter);
-  const withDailyBuff = applyDailyBuff({ ...boosted, name: character.name } as any);
+  const withDailyBuff = applyDailyBuff({ ...boosted, name: character.name, speed: 1 } as any) as unknown as FighterState;
   
   return {
     ...withDailyBuff,
@@ -80,7 +80,7 @@ export const resolveAttack = (
   const damage = computeDamage(attacker, defender, attackType);
   const defenderAfter = applyDamage(defender, damage);
 
-  const attackerAfter = {
+  const attackerAfter: FighterState = {
     ...attacker,
     action: attackType === 'special' ? 'special' : attackType,
     energy: Math.max(0, attacker.energy - config.energyCost),
@@ -105,7 +105,7 @@ export const resolveBlock = (blocker: FighterState): CombatResult => {
 
   return {
     attacker: blocked,
-    defender: blocker,
+    defender: blocker as FighterState,
     message: `${blocker.name} sustenta a guarda e absorve o impacto.`,
     damage: 0,
     impact: 'block',

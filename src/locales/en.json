@@ -1,0 +1,180 @@
+{
+  "navbar": {
+    "home": "Home",
+    "women": "Women",
+    "arena": "Arena",
+    "articles": "Articles",
+    "talks": "Talks",
+    "donations": "Donations",
+    "protocols": "Protocols",
+    "support": "Support",
+    "books": "Books",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "common": {
+    "all": "All",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "understood": "Understood",
+    "backHome": "Back to Home"
+  },
+  "index": {
+    "badge": "Celebrating extraordinary women",
+    "description": "A tribute to women who dared to be brave, changed history, and inspire generations.",
+    "explore": "Explore",
+    "support": "Support",
+    "arena": "Fate Arena",
+    "sectionsTitle": "Support and Resources",
+    "sectionsDescription": "Safe tools for guidance, growth, and knowledge",
+    "supportCardTitle": "Support and Guidance",
+    "supportCardDescription": "Recognize signs of abuse, learn how to leave safely, and access important contacts",
+    "supportBullet1": "Signs of abusive relationships",
+    "supportBullet2": "Emergency contacts",
+    "supportBullet3": "How to build a support network",
+    "booksCardTitle": "Brave Library",
+    "booksCardDescription": "Curated books to inspire, guide, and empower women on their journey",
+    "booksBullet1": "Self-esteem and inner strength",
+    "booksBullet2": "Healing and fresh starts",
+    "booksBullet3": "Women leadership",
+    "featuredTitle": "Highlights",
+    "featuredDescription": "Some of the most influential women in history",
+    "viewAll": "See all 102 women",
+    "helpTitle": "Need Help?",
+    "helpDescription": "If you or someone you know is experiencing violence, access our safety protocols.",
+    "helpButton": "Safety Protocols",
+    "callButton": "Call 180",
+    "sectionCards": [
+      {
+        "title": "102 Incredible Women",
+        "desc": "Discover the stories that changed the world"
+      },
+      {
+        "title": "Fate Arena",
+        "desc": "Epic battles inspired by Fate Stay Night"
+      },
+      {
+        "title": "Articles",
+        "desc": "Write and share your knowledge"
+      },
+      {
+        "title": "Talks",
+        "desc": "A space for psychologists and specialists"
+      },
+      {
+        "title": "Donations",
+        "desc": "Support women who are victims of violence"
+      },
+      {
+        "title": "Protocols",
+        "desc": "Safety and rights guides"
+      }
+    ]
+  },
+  "women": {
+    "title": "Extraordinary Women",
+    "subtitle": "{count} women who transformed the world",
+    "searchPlaceholder": "Search by name or profession...",
+    "noneFound": "No women were found with these filters.",
+    "arenaClass": "Arena Class",
+    "power": "Power"
+  },
+  "arena": {
+    "title": "Fate Arena",
+    "subtitle": "Epic battles between legendary women, now with more presence and impact.",
+    "allClasses": "All Classes",
+    "fighter1": "Fighter 1",
+    "fighter2": "Fighter 2",
+    "chooseFighter": "Choose a fighter for the arena",
+    "draw": "Randomize",
+    "battle": "Battle!",
+    "round": "ROUND {round}",
+    "now": "Now: {name}",
+    "premium": "Premium Arena",
+    "combat": "Combat",
+    "liveReports": "Live reports",
+    "realImpact": "Real impact",
+    "commandsTitle": "Combat commands",
+    "commandsDescription": "Light, heavy, special attack, and block with visual feedback.",
+    "yourTurn": "Your turn",
+    "opponentTurn": "Opponent",
+    "lightAttackTitle": "Quick strike",
+    "lightAttackDescription": "Attacks with speed and control.",
+    "heavyAttackTitle": "Heavy strike",
+    "heavyAttackDescription": "Higher damage, slower movement.",
+    "specialPower": "Special power: {name}",
+    "block": "Steel Guardian",
+    "strategyTitle": "Strategy",
+    "strategyDescription": "Balance pressure and defense. The special move turns the fight when used at the right time.",
+    "victory": "Victory",
+    "victoryDescription": "{name} showed presence, impact, and total control of the arena.",
+    "class": "Class: {value}",
+    "special": "Special: {value}",
+    "newBattle": "New battle",
+    "health": "Health",
+    "energy": "Energy",
+    "specialLabel": "Special",
+    "stamina": "Stamina",
+    "cooldown": "Cooldown",
+    "ready": "Ready",
+    "criticalHit": "CRITICAL HIT",
+    "uraniumBoost": "URANIUM BOOST",
+    "perfectBlock": "Perfect block!",
+    "calculatedDefense": "Calculated defense",
+    "blockLog": "{name} builds a solid guard.",
+    "enemyBlockLog": "{name} blocks and prepares a counterattack.",
+    "enemyHitLog": "{name} landed {damage}!",
+    "attackMessage": "{name} uses {attack} and deals {damage} damage!{suffix}",
+    "playerPopup": "You {label}",
+    "enemyPopup": "Opponent {label}",
+    "comboPopup": "Combo {combo}x! {label}",
+    "attackLabels": {
+      "light": "Light strike",
+      "heavy": "Heavy strike",
+      "special": "Special strike"
+    },
+    "popups": {
+      "light": ["Precise strike", "Sharp jab", "Fatal grip"],
+      "heavy": ["Crushing punch", "Brutal impact", "Compressed steel"],
+      "special": ["Radiant Pulse", "Aura Blast", "Ancient strike"]
+    },
+    "sessionSavedTitle": "Session saved",
+    "sessionSavedDescription": "Your battle progress has been recorded."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page disappeared. But you did not. Let us guide you back.",
+    "note": "If this page should exist, let us know through Support"
+  },
+  "quickExit": {
+    "toast": "Press ESC or click again to leave",
+    "title": "Leave now?",
+    "description": "You will be redirected away from this page. History will be cleared.",
+    "stay": "No, go back",
+    "exit": "Yes, leave",
+    "buttonTitle": "Quick exit (ESC to cancel)",
+    "enableSound": "Enable sound",
+    "disableSound": "Disable sound"
+  },
+  "report": {
+    "buttonTitle": "Need help?",
+    "buttonAria": "Support channel",
+    "title": "Safe Support Channel",
+    "sentTitle": "Your message has been sent",
+    "sentDescription": "You are not alone. We will reach out soon.",
+    "intro": "This is a safe and confidential channel. Your identity will be protected.",
+    "hotline1": "Call 180 - Women's Support Hotline (24/7, free)",
+    "hotline2": "Call 190 - Military Police (emergencies)",
+    "typePlaceholder": "Type of situation",
+    "types": {
+      "violencia": "Domestic violence",
+      "assedio": "Harassment",
+      "discriminacao": "Discrimination",
+      "ameaca": "Threat",
+      "outro": "Other"
+    },
+    "descriptionPlaceholder": "Describe details: date, time, place, witnesses (everything is optional, your safety comes first)...",
+    "contactPlaceholder": "Safe contact (optional)",
+    "submit": "Send anonymously"
+  }
+}

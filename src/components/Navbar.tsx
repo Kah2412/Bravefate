@@ -2,30 +2,33 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Shield, BookOpen, Users, Swords, Mic2, Heart, ShieldAlert, AlertTriangle, Lightbulb, User, LogOut, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { path: "/", label: "Início", icon: Shield },
-  { path: "/mulheres", label: "Mulheres", icon: Users },
-  { path: "/arena", label: "Arena", icon: Swords },
-  { path: "/artigos", label: "Artigos", icon: BookOpen },
-  { path: "/palestras", label: "Palestras", icon: Mic2 },
-  { path: "/doacoes", label: "Doações", icon: Heart },
-  { path: "/protocolos", label: "Protocolos", icon: ShieldAlert },
-];
-
-const supportItems = [
-  { path: "/apoio", label: "Apoio", icon: AlertTriangle, highlight: true },
-  { path: "/livros", label: "Livros", icon: Lightbulb },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useI18n } from "@/i18n";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
   const location = useLocation();
+  const { t } = useI18n();
+
+  const navItems = [
+    { path: "/", label: t("navbar.home"), icon: Shield },
+    { path: "/mulheres", label: t("navbar.women"), icon: Users },
+    { path: "/arena", label: t("navbar.arena"), icon: Swords },
+    { path: "/artigos", label: t("navbar.articles"), icon: BookOpen },
+    { path: "/palestras", label: t("navbar.talks"), icon: Mic2 },
+    { path: "/doacoes", label: t("navbar.donations"), icon: Heart },
+    { path: "/protocolos", label: t("navbar.protocols"), icon: ShieldAlert },
+  ];
+
+  const supportItems = [
+    { path: "/apoio", label: t("navbar.support"), icon: AlertTriangle, highlight: true },
+    { path: "/livros", label: t("navbar.books"), icon: Lightbulb },
+  ];
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    const userData = localStorage.getItem('user');
+    const token = localStorage.getItem("token");
+    const userData = localStorage.getItem("user");
     if (token && userData) {
       setUser(JSON.parse(userData));
     } else {
@@ -34,10 +37,10 @@ const Navbar = () => {
   }, [location.pathname]);
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setUser(null);
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
@@ -48,7 +51,6 @@ const Navbar = () => {
           Brave
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map(({ path, label, icon: Icon }) => (
             <Link
@@ -62,10 +64,9 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
-          
-          {/* Support divider */}
+
           <div className="w-px h-5 bg-border" />
-          
+
           {supportItems.map(({ path, label, icon: Icon, highlight }) => (
             <Link
               key={path}
@@ -85,8 +86,10 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* Auth buttons */}
           <div className="w-px h-5 bg-border" />
+          <LanguageSwitcher />
+          <div className="w-px h-5 bg-border" />
+
           {user ? (
             <div className="flex items-center gap-2">
               <Link
@@ -103,7 +106,7 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-sm font-medium transition-colors px-3 py-1.5 rounded-lg text-muted-foreground hover:text-destructive"
               >
                 <LogOut className="w-4 h-4" />
-                Logout
+                {t("navbar.logout")}
               </button>
             </div>
           ) : (
@@ -114,12 +117,11 @@ const Navbar = () => {
               }`}
             >
               <User className="w-4 h-4" />
-              Login
+              {t("navbar.login")}
             </Link>
           )}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
@@ -128,7 +130,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -144,19 +145,16 @@ const Navbar = () => {
                   to={path}
                   onClick={() => setOpen(false)}
                   className={`flex items-center gap-2 p-2 rounded-lg transition-colors ${
-                    location.pathname === path
-                      ? "bg-accent/10 text-accent"
-                      : "text-muted-foreground hover:bg-muted"
+                    location.pathname === path ? "bg-accent/10 text-accent" : "text-muted-foreground hover:bg-muted"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
                   {label}
                 </Link>
               ))}
-              
-              {/* Support divider */}
+
               <div className="h-px bg-border my-2" />
-              
+
               {supportItems.map(({ path, label, icon: Icon, highlight }) => (
                 <Link
                   key={path}
@@ -177,8 +175,10 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              {/* Auth section */}
               <div className="h-px bg-border my-2" />
+              <LanguageSwitcher mobile />
+              <div className="h-px bg-border my-2" />
+
               {user ? (
                 <>
                   <Link
@@ -201,7 +201,7 @@ const Navbar = () => {
                     className="flex items-center gap-2 p-2 rounded-lg transition-colors text-muted-foreground hover:bg-destructive/10 hover:text-destructive w-full text-left"
                   >
                     <LogOut className="w-4 h-4" />
-                    Logout
+                    {t("navbar.logout")}
                   </button>
                 </>
               ) : (
@@ -215,7 +215,7 @@ const Navbar = () => {
                   }`}
                 >
                   <User className="w-4 h-4" />
-                  Login
+                  {t("navbar.login")}
                 </Link>
               )}
             </div>

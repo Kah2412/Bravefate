@@ -1,24 +1,26 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Filter, X } from "lucide-react";
+import { Search, X } from "lucide-react";
 import WomanCard from "@/components/WomanCard";
 import { women, categories, FALLBACK_WOMEN } from "@/data/women";
+import { useI18n } from "@/i18n";
 
 const Mulheres = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<string | null>(null);
   const [selected, setSelected] = useState<typeof women[0] | null>(null);
+  const { t } = useI18n();
 
   const activeWomen = women.length > 0 ? women : FALLBACK_WOMEN;
 
   const filtered = useMemo(() => {
-    return activeWomen.filter((w) => {
+    return activeWomen.filter((woman) => {
       const matchSearch =
         !search ||
-        w.name.toLowerCase().includes(search.toLowerCase()) ||
-        w.profession.toLowerCase().includes(search.toLowerCase());
-      const matchCat = !category || w.category === category;
-      return matchSearch && matchCat;
+        woman.name.toLowerCase().includes(search.toLowerCase()) ||
+        woman.profession.toLowerCase().includes(search.toLowerCase());
+      const matchCategory = !category || woman.category === category;
+      return matchSearch && matchCategory;
     });
   }, [search, category, activeWomen]);
 
@@ -26,23 +28,18 @@ const Mulheres = () => {
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-3 text-gradient">
-            Mulheres Extraordinárias
-          </h1>
-          <p className="text-muted-foreground">
-            {activeWomen.length} mulheres que transformaram o mundo
-          </p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-3 text-gradient">{t("women.title")}</h1>
+          <p className="text-muted-foreground">{t("women.subtitle", { count: activeWomen.length })}</p>
         </div>
 
-        {/* Filters */}
         <div className="max-w-2xl mx-auto mb-8 space-y-4">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               type="text"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Buscar por nome ou profissão..."
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder={t("women.searchPlaceholder")}
               className="w-full pl-12 pr-4 py-3 rounded-xl border border-input bg-background focus:ring-2 focus:ring-ring outline-none"
             />
           </div>
@@ -53,37 +50,35 @@ const Mulheres = () => {
                 !category ? "gradient-accent text-accent-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
             >
-              Todas
+              {t("common.all")}
             </button>
-            {categories.map((cat) => (
+            {categories.map((item) => (
               <button
-                key={cat}
-                onClick={() => setCategory(cat)}
+                key={item}
+                onClick={() => setCategory(item)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                  category === cat ? "gradient-accent text-accent-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"
+                  category === item ? "gradient-accent text-accent-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
               >
-                {cat}
+                {item}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {filtered.map((w, i) => (
-            <WomanCard key={w.name} woman={w} index={i} onClick={() => setSelected(w)} />
+          {filtered.map((woman, index) => (
+            <WomanCard key={woman.name} woman={woman} index={index} onClick={() => setSelected(woman)} />
           ))}
         </div>
 
         {filtered.length === 0 && (
           <div className="text-center py-20 text-muted-foreground">
-            <p>Nenhuma mulher encontrada com esses filtros.</p>
+            <p>{t("women.noneFound")}</p>
           </div>
         )}
       </div>
 
-      {/* Detail Modal */}
       <AnimatePresence>
         {selected && (
           <motion.div
@@ -97,7 +92,7 @@ const Mulheres = () => {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(event) => event.stopPropagation()}
               className="w-full max-w-lg rounded-2xl bg-background p-8 shadow-2xl border border-border"
             >
               <div className="flex justify-end">
@@ -119,16 +114,15 @@ const Mulheres = () => {
                 <p className="text-muted-foreground leading-relaxed">{selected.description}</p>
                 {selected.gameClass && (
                   <div className="mt-6 p-4 rounded-xl bg-muted">
-                    <p className="text-xs text-muted-foreground mb-1">Classe na Arena</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t("women.arenaClass")}</p>
                     <p className="font-display font-semibold text-lg">{selected.gameClass}</p>
                     <p className="text-sm text-accent">{selected.gameSkill}</p>
                     <div className="mt-2 h-2 rounded-full bg-background overflow-hidden">
-                      <div
-                        className="h-full rounded-full gradient-accent"
-                        style={{ width: `${selected.power}%` }}
-                      />
+                      <div className="h-full rounded-full gradient-accent" style={{ width: `${selected.power}%` }} />
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Poder: {selected.power}/100</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {t("women.power")}: {selected.power}/100
+                    </p>
                   </div>
                 )}
               </div>

@@ -1,0 +1,180 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "women": "Mujeres",
+    "arena": "Arena",
+    "articles": "Articulos",
+    "talks": "Charlas",
+    "donations": "Donaciones",
+    "protocols": "Protocolos",
+    "support": "Apoyo",
+    "books": "Libros",
+    "login": "Ingresar",
+    "logout": "Salir"
+  },
+  "common": {
+    "all": "Todas",
+    "cancel": "Cancelar",
+    "loading": "Cargando...",
+    "understood": "Entendido",
+    "backHome": "Volver al Inicio"
+  },
+  "index": {
+    "badge": "Celebrando a mujeres extraordinarias",
+    "description": "Un tributo a las mujeres que se atrevieron a ser valientes, cambiaron la historia e inspiran generaciones.",
+    "explore": "Explorar",
+    "support": "Apoyar",
+    "arena": "Arena Fate",
+    "sectionsTitle": "Apoyo y Recursos",
+    "sectionsDescription": "Herramientas seguras para orientacion, fortalecimiento y conocimiento",
+    "supportCardTitle": "Apoyo y Orientacion",
+    "supportCardDescription": "Reconoce senales de abuso, aprende a salir con seguridad y accede a contactos importantes",
+    "supportBullet1": "Senales de relacion abusiva",
+    "supportBullet2": "Contactos de emergencia",
+    "supportBullet3": "Como construir una red de apoyo",
+    "booksCardTitle": "Biblioteca Brave",
+    "booksCardDescription": "Libros curados para inspirar, orientar y empoderar a las mujeres en su camino",
+    "booksBullet1": "Autoestima y fuerza interior",
+    "booksBullet2": "Sanacion y recomienzo",
+    "booksBullet3": "Liderazgo femenino",
+    "featuredTitle": "Destacadas",
+    "featuredDescription": "Algunas de las mujeres mas influyentes de la historia",
+    "viewAll": "Ver las 102 mujeres",
+    "helpTitle": "Necesitas Ayuda?",
+    "helpDescription": "Si tu o alguien que conoces esta en una situacion de violencia, accede a nuestros protocolos de seguridad.",
+    "helpButton": "Protocolos de Seguridad",
+    "callButton": "Llama al 180",
+    "sectionCards": [
+      {
+        "title": "102 Mujeres Increibles",
+        "desc": "Conoce las historias que cambiaron el mundo"
+      },
+      {
+        "title": "Arena Fate",
+        "desc": "Batallas epicas al estilo Fate Stay Night"
+      },
+      {
+        "title": "Articulos",
+        "desc": "Escribe y comparte tu conocimiento"
+      },
+      {
+        "title": "Charlas",
+        "desc": "Espacio para psicologas y especialistas"
+      },
+      {
+        "title": "Donaciones",
+        "desc": "Apoya a mujeres victimas de violencia"
+      },
+      {
+        "title": "Protocolos",
+        "desc": "Guias de seguridad y derechos"
+      }
+    ]
+  },
+  "women": {
+    "title": "Mujeres Extraordinarias",
+    "subtitle": "{count} mujeres que transformaron el mundo",
+    "searchPlaceholder": "Buscar por nombre o profesion...",
+    "noneFound": "No se encontraron mujeres con estos filtros.",
+    "arenaClass": "Clase en la Arena",
+    "power": "Poder"
+  },
+  "arena": {
+    "title": "Arena Fate",
+    "subtitle": "Batallas epicas entre mujeres legendarias, ahora con mas presencia e impacto.",
+    "allClasses": "Todas las Clases",
+    "fighter1": "Guerrera 1",
+    "fighter2": "Guerrera 2",
+    "chooseFighter": "Elige una guerrera para la arena",
+    "draw": "Sorteo",
+    "battle": "Batallar!",
+    "round": "RONDA {round}",
+    "now": "Ahora: {name}",
+    "premium": "Arena Premium",
+    "combat": "Combate",
+    "liveReports": "Reportes en vivo",
+    "realImpact": "Impacto real",
+    "commandsTitle": "Comandos de combate",
+    "commandsDescription": "Ataque ligero, pesado, especial y bloqueo con respuesta visual.",
+    "yourTurn": "Tu turno",
+    "opponentTurn": "Oponente",
+    "lightAttackTitle": "Golpe rapido",
+    "lightAttackDescription": "Ataca con velocidad y control.",
+    "heavyAttackTitle": "Golpe pesado",
+    "heavyAttackDescription": "Mas dano, movimiento mas lento.",
+    "specialPower": "Poder especial: {name}",
+    "block": "Guardian de Acero",
+    "strategyTitle": "Estrategia",
+    "strategyDescription": "Equilibra presion y defensa. El especial cambia la pelea cuando se usa en el momento correcto.",
+    "victory": "Victoria",
+    "victoryDescription": "{name} mostro presencia, impacto y control total de la arena.",
+    "class": "Clase: {value}",
+    "special": "Especial: {value}",
+    "newBattle": "Nueva batalla",
+    "health": "Vida",
+    "energy": "Energia",
+    "specialLabel": "Especial",
+    "stamina": "Resistencia",
+    "cooldown": "Enfriamiento",
+    "ready": "Lista",
+    "criticalHit": "GOLPE CRITICO",
+    "uraniumBoost": "IMPULSO DE URANIO",
+    "perfectBlock": "Bloqueo perfecto!",
+    "calculatedDefense": "Defensa calculada",
+    "blockLog": "{name} construye una guardia solida.",
+    "enemyBlockLog": "{name} bloquea y se prepara para contraatacar.",
+    "enemyHitLog": "{name} acerto {damage}!",
+    "attackMessage": "{name} usa {attack} y causa {damage} de dano!{suffix}",
+    "playerPopup": "Tu {label}",
+    "enemyPopup": "Oponente {label}",
+    "comboPopup": "Combo {combo}x! {label}",
+    "attackLabels": {
+      "light": "Golpe ligero",
+      "heavy": "Golpe pesado",
+      "special": "Golpe especial"
+    },
+    "popups": {
+      "light": ["Golpe preciso", "Jab afilado", "Agarre fatal"],
+      "heavy": ["Punetazo demoledor", "Impacto brutal", "Acero comprimido"],
+      "special": ["Pulso Radiante", "Explosion de Aura", "Golpe ancestral"]
+    },
+    "sessionSavedTitle": "Sesion guardada",
+    "sessionSavedDescription": "El progreso de tu batalla fue registrado."
+  },
+  "notFound": {
+    "title": "Pagina no encontrada",
+    "description": "Esa pagina desaparecio. Pero tu no. Vamos a llevarte de vuelta al camino.",
+    "note": "Si esta pagina deberia existir, avisanos por Apoyo"
+  },
+  "quickExit": {
+    "toast": "Presiona ESC o haz clic otra vez para salir",
+    "title": "Salir ahora?",
+    "description": "Seras redirigida fuera de esta pagina. El historial sera limpiado.",
+    "stay": "No, volver",
+    "exit": "Si, salir",
+    "buttonTitle": "Salida rapida (ESC para cancelar)",
+    "enableSound": "Activar sonido",
+    "disableSound": "Desactivar sonido"
+  },
+  "report": {
+    "buttonTitle": "Necesitas ayuda?",
+    "buttonAria": "Canal de apoyo",
+    "title": "Canal Seguro de Apoyo",
+    "sentTitle": "Tu mensaje fue enviado",
+    "sentDescription": "No estas sola. Nos pondremos en contacto pronto.",
+    "intro": "Este es un canal seguro y confidencial. Tu identidad sera protegida.",
+    "hotline1": "Llama al 180 - Central de Atencion a la Mujer (24h, gratis)",
+    "hotline2": "Llama al 190 - Policia Militar (emergencias)",
+    "typePlaceholder": "Tipo de situacion",
+    "types": {
+      "violencia": "Violencia domestica",
+      "assedio": "Acoso",
+      "discriminacao": "Discriminacion",
+      "ameaca": "Amenaza",
+      "outro": "Otro"
+    },
+    "descriptionPlaceholder": "Describe con detalles: fecha, hora, lugar, testigos (todo es opcional, tu seguridad es lo primero)...",
+    "contactPlaceholder": "Contacto seguro (opcional)",
+    "submit": "Enviar de forma anonima"
+  }
+}

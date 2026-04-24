@@ -577,7 +577,7 @@ const Arena = () => {
               <p className="text-lg text-slate-100 mb-4">{winner.name} mostrou presença, impacto e controle total da arena.</p>
               <div className="mb-6 flex flex-wrap justify-center gap-3">
                 <span className="rounded-full bg-slate-950/80 px-4 py-2 text-sm uppercase tracking-[0.18em] text-slate-200">Classe: {winner.gameClass}</span>
-                <span className="rounded-full bg-slate-950/80 px-4 py-2 text-sm uppercase tracking-[0.18em] text-slate-200">Especial: {winner.specialMoveName}</span>
+                <span className="rounded-full bg-slate-950/80 px-4 py-2 text-sm uppercase tracking-[0.18em] text-slate-200">Especial: {winner.gameSkill}</span>
               </div>
               <button
                 onClick={reset}
